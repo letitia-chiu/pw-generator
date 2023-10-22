@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2"
+  },
+  "name": "pw-generator",
+  "version": "1.0.0",
+  "description": "Challenge work for ALPHA Camp Dev C3",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Letitia Chiu",
+  "license": "ISC"
+}
