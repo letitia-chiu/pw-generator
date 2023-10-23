@@ -84,12 +84,29 @@
         </div>
       </div>
 
-
-
     </div> {{!-- card-body --}}
 
     <div class="card-footer text-muted">
-      <button type="submit" class="btn btn-primary">Generate Password</button>
+      <div class="row my-1">
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-success">Generate Password</button>
+        </div>
+        
+        <div class="show-pw col-sm-8 d-flex">
+          <div class="row">
+            <div class="col-sm-4 d-flex justify-content-end">
+              <label for="generated-pw" class="col-form-label">Your Password:</label>
+            </div>
+            <div class="col-sm-7">
+              <input type="text" value="" class="form-control" id="generated-pw">
+            </div>
+            <div class="col-sm-1">
+              <button onclick="copyUrl()" class="btn btn-primary copy-btn">Copy</button>
+            </div>
+          </div>              
+        </div>   
+             
+      </div>
     </div>
 
   </form>
