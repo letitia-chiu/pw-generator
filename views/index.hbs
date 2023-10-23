@@ -87,7 +87,7 @@
     </div> {{!-- card-body --}}
 
     <div class="card-footer text-muted">
-      <div class="row my-1">
+      <div class="row mt-2">
         <div class="col-sm-4">
           <button type="submit" class="btn btn-success">Generate Password</button>
         </div>
@@ -98,10 +98,11 @@
               <label for="generated-pw" class="col-form-label">Your Password:</label>
             </div>
             <div class="col-sm-7">
-              <input type="text" value="" class="form-control" id="generated-pw">
+              <input type="text" value="test" class="form-control" id="generated-pw">
+              <div class="copy-msg" class="form-text">Password copied!</div>
             </div>
             <div class="col-sm-1">
-              <button onclick="copyUrl()" class="btn btn-primary copy-btn">Copy</button>
+              <button onclick="copyPw()" class="btn btn-primary copy-btn" >Copy</button>
             </div>
           </div>              
         </div>   

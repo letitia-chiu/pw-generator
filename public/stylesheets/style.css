@@ -1,3 +1,15 @@
+.show-pw {
+ height: 3.5em;
+}
+
+.copy-msg {
+  display: none;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 0.7em;
+  color: green;
+}
+
 /* .col-form-label {
   outline: 1px solid steelblue;
 }
