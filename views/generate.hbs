@@ -1,5 +1,5 @@
 <div class="card mt-5 w-75">
-  <form action="/generate"></form>
+  <form action="/pw" id="gform" class="needs-validation" novalidate>
     <div class="card-header">
       Random Password Generator
     </div>
@@ -8,9 +8,10 @@
 
       {{!-- Password Length --}}
       <div class="row mb-3">
-        <label for="pw-length" class="col-sm-4 col-form-label">Password Length</label>
+        <label for="pw-length" class="col-sm-4 col-form-label">Password Length *</label>
         <div class="col-sm-8">
-          <input type="number" min="4" max="16" class="form-control" id="pw-length">
+          <input name="Length" type="number" min="4" max="16" class="form-control" id="pw-length" value="8" required>
+          <div class="invalid-feedback">* This field is required and the number must be between 4 and 16.</div>
           <div id="pwLengthHelp" class="form-text">Length is available between 4 ~ 16.</div>
         </div>
       </div>
@@ -26,7 +27,7 @@
         <div class="col-sm-4 col-form-label">Lowercase Characters</div>
         <div class="col-sm-8">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="lowercase">
+            <input name="lowercase" class="form-check-input" type="checkbox" value="true" id="lowercase">
             <label class="form-check-label" for="lowercase">
               (e.g. abcdefg)
             </label>
@@ -39,7 +40,7 @@
         <div class="col-sm-4 col-form-label">Uppercase Characters</div>
         <div class="col-sm-8">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="uppercase">
+            <input name="uppercase" class="form-check-input" type="checkbox" value="true" id="uppercase">
             <label class="form-check-label" for="uppercase">
               (e.g. ABCDEFG)
             </label>
@@ -52,7 +53,7 @@
         <div class="col-sm-4 col-form-label">Numbers</div>
         <div class="col-sm-8">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="numbers">
+            <input name="numbers" class="form-check-input" type="checkbox" value="true" id="numbers">
             <label class="form-check-label" for="numbers">
               (e.g. 123456)
             </label>
@@ -65,7 +66,7 @@
         <div class="col-sm-4 col-form-label">Symbols</div>
         <div class="col-sm-8">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="symbols">
+            <input name="symbols" class="form-check-input" type="checkbox" value="true" id="symbols">
             <label class="form-check-label" for="symbols">
               (e.g. @#$%*)
             </label>
@@ -79,7 +80,7 @@
       <div class="row mb-3">
         <label for="exclude" class="col-sm-4 col-form-label">Exclude Characters</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" id="exclude">
+          <input name="excludedChars" type="text" class="form-control" id="exclude" value="">
           <div id="excludeHelp" class="form-text">These characters will not appear in the password.</div>
         </div>
       </div>
@@ -93,18 +94,7 @@
         </div>
         
         <div class="show-pw col-sm-8 d-flex">
-          <div class="row">
-            <div class="col-sm-4 d-flex justify-content-end">
-              <label for="generated-pw" class="col-form-label">Your Password:</label>
-            </div>
-            <div class="col-sm-7">
-              <input type="text" value="test" class="form-control" id="generated-pw">
-              <div class="copy-msg" class="form-text">Password copied!</div>
-            </div>
-            <div class="col-sm-1">
-              <button onclick="copyPw()" class="btn btn-primary copy-btn" >Copy</button>
-            </div>
-          </div>              
+          {{{pw}}}              
         </div>   
              
       </div>

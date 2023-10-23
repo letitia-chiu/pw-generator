@@ -20,3 +20,12 @@ async function copyPw() {
     console.error('Unable to copy: ', err)
   }
 }
+
+const gform = document.getElementById('gform')
+gform.addEventListener('submit', function onFormSubmitted(event) {
+  if (!gform.checkValidity()) {
+    event.stopPropagation()
+    event.preventDefault()
+    gform.classList.add('was-validated')
+  }
+})
