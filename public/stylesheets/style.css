@@ -1,3 +1,7 @@
+.generator-area {
+  min-width: 965px;
+}
+
 .show-pw {
  height: 3.5em;
 }
